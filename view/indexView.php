@@ -4,6 +4,10 @@
     include ("view/template/nav.php");
 ?>
 
+<main>
+    foreach ()
+</main>
+
 <?php 
     include ("view/template/footer.php");
 ?>
