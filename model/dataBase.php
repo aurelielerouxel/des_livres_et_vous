@@ -4,6 +4,13 @@
 
 class dataBase
 {
+      // private PDO $db;
+  // public function __construct() {
+  //   try {
 
+  //   } catch {
+  
+  //   }
+  // }
 
 }

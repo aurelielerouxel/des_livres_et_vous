@@ -45,4 +45,13 @@ class Livre {
     public function getResume():string {
         return $this->resume;
     }
+
+    public function __construct() {
+        $this->setAutor("autor");
+        $this->setTitle("title");
+        $this->setRelease_date("release_date");
+        $this->setLiterary_style("literary_style");
+        $this->setStatus("status");
+        $this->setResume("resume");
+    }
 }
