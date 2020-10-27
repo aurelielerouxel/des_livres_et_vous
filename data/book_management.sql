@@ -33,13 +33,14 @@ CREATE TABLE book
     auteur VARCHAR (50) NOT NULL,
     titre VARCHAR (50) NOT NULL,
     release_date DATE NOT NULL,
+    literary_style VARCHAR (30) NOT NULL,
     status VARCHAR (1) NOT NULL,
     resume TEXT,
-    user_id INT UNSIGNED,
+    user_id INT UNSIGNED NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (user_id) REFERENCES User(id)
 )
 ENGINE=InnoDB;
 
--- INSERT INTO Book (auteur, titre, release_date, status, resume, user_id)
--- VALUE ()
+INSERT INTO Book (auteur, titre, release_date, literary_style, status, resume, user_id)
+VALUE ('Hamel', 'Gargue', 2020-02-25 , 'horreur', 'O', 'Schtroumfement schtroumpfe. Schtroumpfe alors...', NULL);
