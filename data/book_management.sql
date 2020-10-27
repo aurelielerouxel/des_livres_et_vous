@@ -30,8 +30,8 @@ VALUE ('0000lol0000', 'Penneflamme', 'Katty', 'tu@nes', '2 notre', '10101', 'Gal
 CREATE TABLE book 
 (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-    auteur VARCHAR (50) NOT NULL,
-    titre VARCHAR (50) NOT NULL,
+    autor VARCHAR (50) NOT NULL,
+    title VARCHAR (50) NOT NULL,
     release_date DATE NOT NULL,
     literary_style VARCHAR (30) NOT NULL,
     status VARCHAR (1) NOT NULL,
@@ -42,5 +42,5 @@ CREATE TABLE book
 )
 ENGINE=InnoDB;
 
-INSERT INTO Book (auteur, titre, release_date, literary_style, status, resume, user_id)
+INSERT INTO Book (autor, title, release_date, literary_style, status, resume, user_id)
 VALUE ('Hamel', 'Gargue', 2020-02-25 , 'horreur', 'O', 'Schtroumfement schtroumpfe. Schtroumpfe alors...', NULL);
