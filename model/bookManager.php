@@ -1,25 +1,22 @@
 <?php
 
-class bookManager {
-  // private PDO $db;
-  // public function __construct() {
-  //   try {
+try {
+  $this->db = new PDO('mysql:host=localhost;dbname=book_management', 'bookManager', 'bookManager');
+} catch (PDOExeption $e) {
+  print "Erreur !: " . $e->getMessage() . "<br/>";
+  die();
+}
 
-  //   } catch {
-  
-  //   }
-  // }
-  try {
-    $this->db = new PDO('mysql:host=localhost;dbname=book_management', 'bookManager', 'bookManager');
-  } catch (PDOExeption $e) {
-    print "Erreur !: " . $e->getMessage() . "<br/>";
-    die();
-  }
+class bookManager {
 
   // Récupère tous les livres
   public function getBooks() {
-    "SELECT *
-    FROM Book"
+    $db->prepare(
+      "SELECT *
+      FROM Book"
+    );
+    $query->execute();
+    $books = $query->fetchAll(PDO::FETCH_ASSOC)
   }
 
   // Récupère un livre
