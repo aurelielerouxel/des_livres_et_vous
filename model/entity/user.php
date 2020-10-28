@@ -1,6 +1,6 @@
 <?php
 // Classe représetant les utilisateurs stockés en base de données
-class Utilisateur {
+class User {
     private int $id;
     private string $user_number;
     private string $firstname;
