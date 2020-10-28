@@ -53,7 +53,14 @@ class Book {
         return $this->resume;
     }
 
-    public function __construct() {
-
+    public function __construct(array $data = null) {
+        if($data) {
+            $this->setAutor($data["autor"]);
+            $this->setTitle($data["title"]);
+            $this->setRelease_date($data["release_date"]);
+            $this->setLiterary_style($data["literary_style"]);
+            $this->setStatus($data["status"]);
+            $this->setResume($data["resume"]);
+        }
     }
 }

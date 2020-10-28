@@ -21,12 +21,12 @@ class bookManager {
 
   // Récupère tous les livres
   public function getBooks() {
-    $query = $this->db->query(
-      "SELECT*
-      FROM Book"
-    );
-    $books = $query->fetchAll(PDO::FETCH_CLASS, "Book");
-    return $books;
+      $query = $this->db->query(
+        "SELECT*
+        FROM Book"
+      );
+      $books = $query->fetchAll(PDO::FETCH_CLASS, "Book");
+      return $books;
   }
 
   // Récupère un livre
@@ -35,8 +35,20 @@ class bookManager {
   }
 
   // Ajoute un nouveau livre
-  public function addBook() {
-
+  public function addBook(Book $book) {
+      $query = $this->db->prepare(
+        "INSERT INTO Book (autor, title, release_date, literary_style, status, resume)
+        VALUE (:autor, :title, :release_date, :literary_style, :status, :resume)"
+      );
+      $result = $query->execute([
+        "autor" => $book->getAutor(),
+        "title" => $book->getTitle(),
+        "release_date" => $book->getRelease_date(),
+        "literary_style" => $book->getLiterary_style(),
+        "status" => $book->getStatus(),
+        "resume" => $book->getResume(),
+      ]);
+    
   }
 
   // Met à jour le statut d'un livre emprunté
