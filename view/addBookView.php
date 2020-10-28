@@ -32,7 +32,7 @@
             <textarea type="text" class="form-control" id="resume" name="resume"></textarea>
         </div>
 
-        <button type="submit" class="btn btn-primary btn-lg btn-block" name="submit_book">Ajouter le livre dans la bibliothèque</button>
+        <button type="submit" class="btn btn-primary btn-lg btn-block mb-4" name="submit_book">Ajouter le livre dans la bibliothèque</button>
     </form>
 </main>
 

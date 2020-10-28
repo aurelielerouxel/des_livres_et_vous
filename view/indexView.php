@@ -15,7 +15,6 @@
                     <th scope="col">Release date</th>
                     <th scope="col">Literary style</th>
                     <th scope="col">Status</th>
-                    <!-- <th scope="col">Resume</th> -->
                     <th scope="col">See details</th>
                 </tr>
             </thead>
@@ -28,7 +27,6 @@
                         <td><?php echo $book->getRelease_date() ?></td>
                         <td><?php echo $book->getLiterary_style() ?></td>
                         <td><?php echo $book->getStatus() ?></td>
-                        <!-- <td><?php ?></td> -->
                         <td><a href="book.php">More infos</a></td>
                     </tr>
                 <?php endforeach; ?>
