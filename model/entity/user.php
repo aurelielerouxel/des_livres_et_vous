@@ -1,6 +1,7 @@
 <?php
 // Classe représetant les utilisateurs stockés en base de données
 class Utilisateur {
+    private int $id;
     private string $user_number;
     private string $firstname;
     private string $lastname;
@@ -9,6 +10,9 @@ class Utilisateur {
     private string $postal_code;
     private string $city;
 
+    public function setId(int $id) {
+        $this->id = $id;
+    }
     public function setUser_number(string $user_number) {
         $this->user_number = $user_number;
     }
@@ -31,6 +35,9 @@ class Utilisateur {
         $this->city = $city;
     }
 
+    public function getId():int {
+        return $this->id;
+    }
     public function getUser_number():string {
         return $this->user_number;
     }
@@ -54,12 +61,6 @@ class Utilisateur {
     }
 
     public function __construct() {
-        $this->setUser_number("user_number");
-        $this->setFirstname("firstname");
-        $this->setLastname("lastname");
-        $this->setEmail("email");
-        $this->setAdress("adress");
-        $this->setPostal_code("postal_code");
-        $this->setCity("city");
+
     }
 }

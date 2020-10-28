@@ -1,6 +1,7 @@
 <?php
 // Classe représetant les livres stockés en base de données
-class Livre {
+class Book {
+    private int $id;
     private string $autor;
     private string $title;
     private string $release_date;
@@ -8,6 +9,9 @@ class Livre {
     private string $status;
     private string $resume;
 
+    public function setId(int $id) {
+        $this->id = $id;
+    }
     public function setAutor(string $autor) {
         $this->autor = $autor;
     }
@@ -27,6 +31,9 @@ class Livre {
         $this->resume = $resume;
     }
 
+    public function getId():int {
+        return $this->id;
+    }
     public function getAutor():string {
         return $this->autor;
     }
@@ -47,11 +54,6 @@ class Livre {
     }
 
     public function __construct() {
-        $this->setAutor("autor");
-        $this->setTitle("title");
-        $this->setRelease_date("release_date");
-        $this->setLiterary_style("literary_style");
-        $this->setStatus("status");
-        $this->setResume("resume");
+
     }
 }

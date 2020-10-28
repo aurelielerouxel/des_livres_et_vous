@@ -3,4 +3,7 @@
     include ("model/bookManager.php");
     include ("model/entity/book.php");
 
+    $bookManager = new bookManager();
+    $books = $bookManager->getBooks();
+    
     require ("view/indexView.php");
