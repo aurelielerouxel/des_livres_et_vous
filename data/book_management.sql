@@ -43,4 +43,4 @@ CREATE TABLE book
 ENGINE=InnoDB;
 
 INSERT INTO Book (autor, title, release_date, literary_style, status, resume, user_id)
-VALUE ('Hamel', 'Gargue', 2020-02-25 , 'horreur', 'O', 'Schtroumfement schtroumpfe. Schtroumpfe alors...', NULL);
+VALUE ('Miguel de Cervantes', 'Don Quichotte' , 1605, 'roman', 'O', 'Don Quichotte est un Hidalgo (gentilhomme de la noblesse) obsédé par la chevalerie et Sancho Panza, un paysan obsédé par la nourriture, est son écuyer. Le premier est un chevalier errant et illuminé qui part combattre le mal à travers "l"Espagne sur son cheval : Rossinante.', NULL);

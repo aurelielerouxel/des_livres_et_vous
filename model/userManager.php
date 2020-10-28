@@ -23,6 +23,22 @@ class userManager {
     return $users;
   }
 
+  public function addUser(User $user) {
+    $query = $this->db->prepare(
+      "INSERT INTO User(user_number, firstname, lastname, email, adress, postal_code, city)
+      VALUES (:user_number, :firstname, :lastname, :email, :adress, :postal_code, :city)"
+    );
+    $result = $query->execute([
+      "user_number" => $user->getUser_number(),
+      "firstname" => $user->getFirstname(),
+      "lastname" => $user->getLastname(),
+      "email" => $user->getEmail(),
+      "adress" => $user->getAdress(),
+      "postal_code" => $user->getPostal_code(),
+      "city" => $user->getCity(),
+    ]);
+  }
+
   // Récupère un utilisateur par son id
   public function getUserById() {
 

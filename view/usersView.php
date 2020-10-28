@@ -16,6 +16,7 @@
                     <th scope="col">Adress</th>
                     <th scope="col">Postal code</th>
                     <th scope="col">City</th>
+                    <th scope="col">See details</th>
                 </tr>
             </thead>
             <tbody>
@@ -29,6 +30,7 @@
                         <td><?php echo $user->getAdress() ?></td>
                         <td><?php echo $user->getPostal_code() ?></td>
                         <td><?php echo $user->getCity() ?></td>
+                        <td><a href="user.php">More infos</a></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>

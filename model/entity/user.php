@@ -60,7 +60,15 @@ class User {
         return $this->city;
     }
 
-    public function __construct() {
-
+    public function __construct(array $data) {
+        if($data) {
+            $this->setFirstname($data["firstname"]);
+            $this->setLastname($data["lastname"]);
+            $this->setEmail($data["email"]);
+            $this->setAdress($data["adress"]);
+            $this->setPostal_code($data["postal_code"]);
+            $this->setCity($data["city"]);
+            $this->setUser_number($data["user_number"]);
+        }
     }
 }
