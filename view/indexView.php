@@ -6,7 +6,7 @@
 
 <main>
     <div class="container">
-        <table class="table m-5">
+        <table class="table mt-5">
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">#</th>
@@ -15,23 +15,23 @@
                     <th scope="col">Release date</th>
                     <th scope="col">Literary style</th>
                     <th scope="col">Status</th>
-                    <th scope="col">Resume</th>
+                    <!-- <th scope="col">Resume</th> -->
                     <th scope="col">See details</th>
                 </tr>
             </thead>
             <tbody>
-                <?php ?>
+                <?php foreach ($books as $key => $book):?>
                     <tr>
-                        <th scope="row">1</th>
-                        <td><?php echo $books["id"];?></td>
-                        <td><?php ?></td>
-                        <td><?php ?></td>
-                        <td><?php ?></td>
-                        <td><?php ?></td>
-                        <td><?php ?></td>
+                        <th scope="row"><?php echo $book->getId() ?></th>
+                        <td><?php echo $book->getAutor() ?></td>
+                        <td><?php echo $book->getTitle() ?></td>
+                        <td><?php echo $book->getRelease_date() ?></td>
+                        <td><?php echo $book->getLiterary_style() ?></td>
+                        <td><?php echo $book->getStatus() ?></td>
+                        <!-- <td><?php ?></td> -->
                         <td><a href="book.php">More infos</a></td>
                     </tr>
-                <?php ?>
+                <?php endforeach; ?>
             </tbody>
         </table>
     </div>
