@@ -55,6 +55,7 @@ class Book {
 
     public function __construct(array $data = null) {
         if($data) {
+            $this->setId($data["id"]);
             $this->setAutor($data["autor"]);
             $this->setTitle($data["title"]);
             $this->setRelease_date($data["release_date"]);

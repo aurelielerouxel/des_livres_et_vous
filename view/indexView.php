@@ -27,7 +27,7 @@
                         <td><?php echo $book->getRelease_date() ?></td>
                         <td><?php echo $book->getLiterary_style() ?></td>
                         <td><?php echo $book->getStatus() ?></td>
-                        <td><a href="book.php">More infos</a></td>
+                        <td><a href="book.php?id=<?php echo $book->getId(); ?>">More infos</a></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>

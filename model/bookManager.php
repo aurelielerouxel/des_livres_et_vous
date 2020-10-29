@@ -21,17 +21,26 @@ class bookManager {
 
   // Récupère tous les livres
   public function getBooks() {
-      $query = $this->db->query(
-        "SELECT*
-        FROM Book"
-      );
-      $books = $query->fetchAll(PDO::FETCH_CLASS, "Book");
-      return $books;
+    $query = $this->db->query(
+      "SELECT*
+      FROM Book"
+    );
+    $books = $query->fetchAll(PDO::FETCH_CLASS, "Book");
+    return $books;
   }
 
   // Récupère un livre
-  public function getBook() {
-
+  public function getBook($id) {
+    $query = $this->db->prepare(
+      "SELECT id, autor, title, release_date, literary_style, status, resume, user_id
+      FROM Book
+      WHERE id = :id"
+    );
+    $query->execute([
+      "id" => $id
+    ]);
+    $book = $query->fetchAll(PDO::FETCH_CLASS, "Book");
+    return $book;
   }
 
   // Ajoute un nouveau livre

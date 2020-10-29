@@ -40,8 +40,17 @@ class userManager {
   }
 
   // Récupère un utilisateur par son id
-  public function getUserById() {
-
+  public function getUserById($id) {
+    $query = $this->db->prepare(
+      "SELECT id, user_number, firstname, lastname, email, adress, postal_code, city
+      FROM User
+      WHERE id = :id"
+    );
+    $query->execute([
+      "id" => $id
+    ]);
+    $user = $query->fetchAll(PDO::FETCH_CLASS, "User");
+    return $user;
   }
 
   // Récupère un utilisateur par son code personnel
