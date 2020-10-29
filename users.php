@@ -5,4 +5,5 @@
 
     $userManager = new userManager();
     $users = $userManager->getUsers();
+    
     require ("view/usersView.php");

@@ -30,7 +30,7 @@
                         <td><?php echo $user->getAdress() ?></td>
                         <td><?php echo $user->getPostal_code() ?></td>
                         <td><?php echo $user->getCity() ?></td>
-                        <td><a href="user.php">More infos</a></td>
+                        <td><a href="user.php?id=<?php echo $user->getId(); ?>">More infos</a></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>

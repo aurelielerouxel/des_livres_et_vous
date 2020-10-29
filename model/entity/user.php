@@ -60,7 +60,7 @@ class User {
         return $this->city;
     }
 
-    public function __construct(array $data) {
+    public function __construct(array $data = null) {
         if($data) {
             $this->setFirstname($data["firstname"]);
             $this->setLastname($data["lastname"]);
