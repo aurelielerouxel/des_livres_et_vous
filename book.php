@@ -7,7 +7,6 @@
         $id = filter_var($_GET["id"], FILTER_SANITIZE_NUMBER_INT);
         $bookManager = new bookManager();
         $book = $bookManager->getBook($id);
-        var_dump($book);
     }   
 
     require ("view/bookView.php");

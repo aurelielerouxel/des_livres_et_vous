@@ -39,7 +39,7 @@ class bookManager {
     $query->execute([
       "id" => $id
     ]);
-    $book = $query->fetchAll(PDO::FETCH_CLASS, "Book");
+    $book = $query->fetchAll(PDO::FETCH_CLASS, "Book")[0];
     return $book;
   }
 
