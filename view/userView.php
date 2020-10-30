@@ -3,13 +3,13 @@
     include ("view/template/nav.php");
 ?>
 <!-- <p>l'utilisateur sur lequel on a cliqué s'affiche sur cette page</p> -->
-<main class="container">
+<main class="container my-4">
     <article class="card" style="width: 18rem;">
-    <img src="img/human.png" class="card-img-top" alt="...">
+    <img src="assets/img/human.png" class="card-img-top" alt="...">
         <section class="card-body">
-            <h5 class="card-title"><?php echo $user->getFirstname(); ?></h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="index.php" class="btn btn-primary">Go somewhere</a>
+            <h5 class="card-title"><?php echo $user->getFirstname() ; echo "<br>"; echo $user->getLastname() ; ?></h5>
+            <p class="card-text"></p>
+            <a href="index.php" class="btn btn-primary">Retourner voir la liste des utilisateurs.</a>
         </section>
     </article>
 </main>

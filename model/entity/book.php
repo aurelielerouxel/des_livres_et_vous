@@ -8,6 +8,7 @@ class Book {
     private string $literary_style;
     private string $status;
     private string $resume;
+    // private int $user_id;
 
     public function setId(int $id) {
         $this->id = $id;
@@ -30,6 +31,9 @@ class Book {
     public function setResume(string $resume) {
         $this->resume = $resume;
     }
+    // public function setUser_id(int $user_id) {
+    //     $this->user_id = $user_id;
+    // }
 
     public function getId():int {
         return $this->id;
@@ -52,16 +56,20 @@ class Book {
     public function getResume():string {
         return $this->resume;
     }
+    // public function getUser_id():int {
+    //     return $this->user_id;
+    // }
 
     public function __construct(array $data = null) {
         if($data) {
-            $this->setId($data["id"]);
+            // $this->setId($data["id"]);
             $this->setAutor($data["autor"]);
             $this->setTitle($data["title"]);
             $this->setRelease_date($data["release_date"]);
             $this->setLiterary_style($data["literary_style"]);
             $this->setStatus($data["status"]);
             $this->setResume($data["resume"]);
+            // $this->setUser_id($data["user_id"]);
         }
     }
 }

@@ -49,7 +49,7 @@ class userManager {
     $query->execute([
       "id" => $id
     ]);
-    $user = $query->fetchAll(PDO::FETCH_CLASS, "User");
+    $user = $query->fetchAll(PDO::FETCH_CLASS, "User")[0];
     return $user;
   }
 
