@@ -6,6 +6,7 @@
 <main class="container">
     <div class="row my-4">
 
+    <?php if($book->getUser_id() !== null): ?>
         <div class="col-12 col-md-4">
             <article class="card_book">
                 <img src="assets/img/open-book.png" class="card-img-top" alt="...">
@@ -14,12 +15,14 @@
                         <h5 class="card-title"><?php echo $book->getAutor() ?></h5>
                         <p class="card-text"><?php echo $book->getResume() ?></p>
                         <a href="index.php" class="btn btn-primary">Retourner à la liste des livres</a>
+                        <a href="" class="btn btn-primary" name="delete_book">Supprimer le livre</a>
+
                     </section>
             </arcticle>
         </div>
 
         <!-- condition + (boucle si plusieurs exemplaires du même livre) si un user_id est trouvé, j'affiche sa carte -->
-        <?php if($book->getUser_id() !== null): ?>
+        
             <div class="col-12 col-md-8">
                 <table class="table mt-5">
                     <thead class="thead-dark">
