@@ -6,7 +6,6 @@
 <main class="container">
     <div class="row my-4">
 
-    <?php if($book->getUser_id() !== null): ?>
         <div class="col-12 col-md-4">
             <article class="card_book">
                 <img src="assets/img/open-book.png" class="card-img-top" alt="...">
@@ -22,31 +21,30 @@
         </div>
 
         <!-- condition + (boucle si plusieurs exemplaires du même livre) si un user_id est trouvé, j'affiche sa carte -->
-        
-            <div class="col-12 col-md-8">
-                <table class="table mt-5">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Identifiant</th>
-                            <th scope="col">Firstname</th>
-                            <th scope="col">Lastname</th>
-                            <th scope="col">See details</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row"><?php echo $user->getId() ?></th>
-                            <td><?php echo $user->getUser_number() ?></td>
-                            <td><?php echo $user->getFirstname() ?></td>
-                            <td><?php echo $user->getLastname() ?></td>
-                            <td><a href="user.php?id=<?php echo $user->getId(); ?>">More infos</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        
-        
+        <?php if($book->getUser_id() !== null): ?>
+        <div class="col-12 col-md-8">
+            <table class="table mt-5">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Identifiant</th>
+                        <th scope="col">Firstname</th>
+                        <th scope="col">Lastname</th>
+                        <th scope="col">See details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row"><?php echo $user->getId() ?></th>
+                        <td><?php echo $user->getUser_number() ?></td>
+                        <td><?php echo $user->getFirstname() ?></td>
+                        <td><?php echo $user->getLastname() ?></td>
+                        <td><a href="user.php?id=<?php echo $user->getId(); ?>">More infos</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+         
         <!-- Sinon, j'affiche un formulaire pour emprunter le livre -->
         <?php else: ?>
         <div class="col-12 col-md-8">
