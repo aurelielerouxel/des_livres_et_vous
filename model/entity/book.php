@@ -1,14 +1,14 @@
 <?php
 // Classe représetant les livres stockés en base de données
 class Book {
-    private int $id;
-    private string $autor;
-    private string $title;
-    private string $release_date;
-    private string $literary_style;
-    private string $status;
-    private string $resume;
-    // private int $user_id;
+    protected int $id;
+    protected string $autor;
+    protected string $title;
+    protected string $release_date;
+    protected string $literary_style;
+    protected string $status;
+    protected string $resume;
+    protected ?int $user_id;
 
     public function setId(int $id) {
         $this->id = $id;
@@ -31,9 +31,9 @@ class Book {
     public function setResume(string $resume) {
         $this->resume = $resume;
     }
-    // public function setUser_id(int $user_id) {
-    //     $this->user_id = $user_id;
-    // }
+    public function setUser_id(int $user_id = null) {
+        $this->user_id = $user_id;
+    }
 
     public function getId():int {
         return $this->id;
@@ -56,9 +56,9 @@ class Book {
     public function getResume():string {
         return $this->resume;
     }
-    // public function getUser_id():int {
-    //     return $this->user_id;
-    // }
+    public function getUser_id():int {
+        return $this->user_id;
+    }
 
     public function __construct(array $data = null) {
         if($data) {
@@ -69,7 +69,7 @@ class Book {
             $this->setLiterary_style($data["literary_style"]);
             $this->setStatus($data["status"]);
             $this->setResume($data["resume"]);
-            // $this->setUser_id($data["user_id"]);
+            $this->setUser_id($data["user_id"]);
         }
     }
 }

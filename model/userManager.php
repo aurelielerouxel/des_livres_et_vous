@@ -5,7 +5,7 @@ class userManager {
 
   public function __construct() {
       try {
-          $this->db = new PDO('mysql:host=localhost;dbname=book_management', 'bookManager', 'bookManager');
+          $this->db = new PDO('mysql:host=localhost;dbname=librairie', 'laloose', 'laloose');
       } catch (PDOExeption $e) {
           print "Erreur !: " . $e->getMessage() . "<br/>";
           die();
