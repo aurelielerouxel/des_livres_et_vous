@@ -31,7 +31,7 @@ class Book {
     public function setResume(string $resume) {
         $this->resume = $resume;
     }
-    public function setUser_id(int $user_id = null) {
+    public function setUser_id(int $user_id) {
         $this->user_id = $user_id;
     }
 
@@ -56,7 +56,7 @@ class Book {
     public function getResume():string {
         return $this->resume;
     }
-    public function getUser_id():int {
+    public function getUser_id():?int {
         return $this->user_id;
     }
 
