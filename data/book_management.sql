@@ -1,14 +1,14 @@
-DROP DATABASE IF EXISTS librairie;
+-- DROP DATABASE IF EXISTS book_management;
 
-CREATE DATABASE librairie DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE DATABASE book_management DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 
-USE librairie;
+USE book_management;
 
-DROP USER IF EXISTS 'laloose'@'localhost';
+-- DROP USER IF EXISTS 'laloose'@'localhost';
 
 CREATE USER 'laloose'@'localhost';
 
-GRANT ALL PRIVILEGES ON librairie.* To 'laloose'@'localhost' IDENTIFIED BY 'laloose';
+GRANT ALL PRIVILEGES ON book_management.* To 'laloose'@'localhost' IDENTIFIED BY 'laloose';
 
 CREATE TABLE User
 (

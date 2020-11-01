@@ -14,17 +14,23 @@
         $user = $userManager->getUserById($id);
     } 
     
-    // // Supprime un livre
-    // if (isset($_POST["delete_book"]) AND ($book->getUser_id() === null)) {
-    //     $delete_book = $bookManager->deleteBook();
-    //     if ($delete_book) {
-    //         header("Location: index.php");
-    //         exit();
-    //     }
-    // } 
-    // design du else, dans un alerte
+    // Supprime un livre
+    if (isset($_POST["delete_book"]) AND ($book->getUser_id() === null)) {
+        $delete_book = $bookManager->deleteBook();
+        if ($delete_book) {
+            header("Location: index.php");
+            exit();
+        }
+    } 
     // else {
-        // echo "Vous ne pouvez pas supprimer ce livre, si un utilisateur l'a emprunté.";
+    //     echo "<script>alert(\"Vous ne pouvez pas supprimer ce livre, si un utilisateur l'a emprunté.\")</script>";
     // }
-    
+
+    // // Update status d'un livre
+    // if(isset($_POST["emprunter"]) AND ) {
+    //   $status = $bookManager->updateBookStatus();  
+    // }
+    // else {
+
+    // }
     require ("view/bookView.php");

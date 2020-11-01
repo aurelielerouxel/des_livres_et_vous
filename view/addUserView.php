@@ -38,7 +38,7 @@
             <input type="text" class="form-control" id="user_number" name="user_number">
         </div>
 
-        <button type="submit" class="btn btn-primary btn-lg btn-block mb-4" name="submit_user">Ajouter le livre dans la bibliothèque</button>
+        <button type="submit" class="btn btn-primary btn-lg btn-block mb-4" name="submit_user">Ajouter un utilisateur</button>
     </form>
 </main>
 
