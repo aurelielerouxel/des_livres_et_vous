@@ -5,7 +5,7 @@ class bookManager {
 
   public function __construct() {
       try {
-          $this->db = new PDO('mysql:host=localhost;dbname=librairie', 'laloose', 'laloose');
+          $this->db = new PDO('mysql:host=localhost;dbname=book_management', 'laloose', 'laloose');
       } catch (PDOExeption $e) {
           print "Erreur !: " . $e->getMessage() . "<br/>";
           die();
@@ -75,7 +75,8 @@ class bookManager {
       WHERE id = :id"
     );
     $status = $query->execute([
-      "id" => $_GET["id"]
+      "id" => $_GET["id"],
+      "user_id" => $user->getId()
     ]);
     return $status;
   }

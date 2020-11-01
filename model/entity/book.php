@@ -31,7 +31,7 @@ class Book {
     public function setResume(string $resume) {
         $this->resume = $resume;
     }
-    public function setUser_id(int $user_id) {
+    public function setUser_id(int $user_id = null) {
         $this->user_id = $user_id;
     }
 
